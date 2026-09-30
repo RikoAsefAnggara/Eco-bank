@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Pengurus - EcoBank</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="brand">
+            <div class="brand-icon">♻</div>
+            <span>EcoBank Admin</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="admin.html" class="active">Panel Utamamu</a></li>
+            <li><a href="dashboard.html">Tampilan Warga</a></li>
+            <li><a href="index.html" style="color: #ef4444;">Keluar</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <!-- Hero Admin -->
+        <div class="card hero-card" style="background: linear-gradient(135deg, #1e293b, #0f172a);">
+            <h1>Panel Pengurus & Pos Penimbangan</h1>
+            <p>Kelola pencatatan setoran warga, pendaftaran nasabah, dan rekapitulasi aktivitas bank sampah.</p>
+        </div>
+
+        <!-- Statistik Global Komunitas -->
+        <div class="grid-3">
+            <div class="card">
+                <div class="card-title">👥 Total Nasabah Aktif</div>
+                <div class="stat-value" style="color: #2563eb;">128</div>
+                <div class="stat-label">Warga Terdaftar</div>
+            </div>
+            <div class="card">
+                <div class="card-title">📦 Sampah Terkumpul</div>
+                <div class="stat-value" style="color: #059669;">1,420 kg</div>
+                <div class="stat-label">Total Akumulasi Komunitas</div>
+            </div>
+            <div class="card">
+                <div class="card-title">🎖 Total Poin Beredar</div>
+                <div class="stat-value" style="color: #d97706;">142,000</div>
+                <div class="stat-label">Poin Belum Ditukarkan</div>
+            </div>
+        </div>
+
+        <div class="grid-2">
+            <!-- Form Pos Penimbangan Langsung oleh Petugas -->
+            <div class="card">
+                <div class="card-title">⚖ Pos Penimbangan Sampah Warga</div>
+                <form id="formAdminInput" onsubmit="event.preventDefault(); alert('Setoran berhasil ditambahkan ke akun warga!');">
+                    <div class="form-group">
+                        <label for="idNasabah">Pilih ID Nasabah / Warga</label>
+                        <select id="idNasabah" class="form-control" required>
+                            <option value="">-- Pilih Nasabah --</option>
+                            <option value="NSB001">NSB001 - Budi Santoso</option>
+                            <option value="NSB002">NSB002 - Siti Rahma</option>
+                            <option value="NSB003">NSB003 - Ahmad Fauzi</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="adminJenis">Jenis Sampah</label>
+                        <select id="adminJenis" class="form-control" required>
+                            <option value="Plastik PET">Botol Plastik PET (100 poin/kg)</option>
+                            <option value="Kardus Bekas">Kertas & Kardus (50 poin/kg)</option>
+                            <option value="Kaleng Aluminium">Kaleng Aluminium (200 poin/kg)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="adminBerat">Berat Hasil Timbangan (kg)</label>
+                        <input type="number" step="0.1" id="adminBerat" class="form-control" placeholder="Contoh: 5.0" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Simpan & Verifikasi Poin</button>
+                </form>
+            </div>
+
+            <!-- Rekapitulasi & Tarif Poin -->
+            <div class="card">
+                <div class="card-title">⚙ Pengaturan Tarif Poin & Laporan</div>
+                <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">
+                    Tarif Poin per KG Sampah yang Berlaku Saat Ini:
+                </p>
+                <div class="table-responsive" style="margin-bottom: 1.5rem;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Kategori Sampah</th>
+                                <th>Nilai Poin / Kg</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Botol Plastik PET</td>
+                                <td><strong style="color: var(--primary-color);">100 Poin</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Kertas & Kardus</td>
+                                <td><strong style="color: var(--primary-color);">50 Poin</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Kaleng Aluminium</td>
+                                <td><strong style="color: var(--primary-color);">200 Poin</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <button class="btn btn-primary" onclick="alert('Laporan Aktivitas Bank Sampah berhasil dicetak!')" style="background-color: #3b82f6;">
+                    📄 Cetak Laporan Aktivitas
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

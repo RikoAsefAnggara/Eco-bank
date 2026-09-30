@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setor Sampah - EcoBank</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="brand">
+            <div class="brand-icon">♻</div>
+            <span>EcoBank</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="setoran.html" class="active">Setor Sampah</a></li>
+            <li><a href="redeem.html">Katalog Poin</a></li>
+            <li><a href="index.html" style="color: #ef4444;">Keluar</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="grid-2">
+            <!-- Form Input Setoran -->
+            <div class="card">
+                <div class="card-title">📝 Form Pencatatan Setoran</div>
+                <form id="formSetoran">
+                    <div class="form-group">
+                        <label for="jenisSampah">Jenis Sampah</label>
+                        <select id="jenisSampah" class="form-control" required>
+                            <option value="" data-poin="0">-- Pilih Jenis Sampah --</option>
+                            <option value="plastik" data-poin="100">Botol Plastik (100 poin/kg)</option>
+                            <option value="kertas" data-poin="50">Kertas & Kardus (50 poin/kg)</option>
+                            <option value="logam" data-poin="200">Kaleng Aluminium (200 poin/kg)</option>
+                            <option value="kaca" data-poin="80">Botol Kaca (80 poin/kg)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="beratSampah">Berat Sampah (Kg)</label>
+                        <input type="number" step="0.1" id="beratSampah" class="form-control" placeholder="Contoh: 2.5" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="estimasiPoin">Estimasi Poin Diperoleh</label>
+                        <input type="text" id="estimasiPoin" class="form-control" value="0 Poin" readonly style="background-color: #f3f4f6; font-weight: bold; color: var(--primary-color);">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Konfirmasi Setoran</button>
+                </form>
+            </div>
+
+            <!-- Panduan / Gambar -->
+            <div class="card">
+                <div class="card-title">💡 Panduan Pemilahan Sampah</div>
+                <img src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=600&q=80" alt="Pemilahan Sampah" style="width:100%; border-radius:8px; margin-bottom:1rem;">
+                <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.5;">
+                    Pastikan sampah yang disetorkan sudah dalam kondisi bersih dan kering untuk mempermudah proses penimbangan dan penilaian poin oleh petugas.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

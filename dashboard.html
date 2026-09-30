@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Bank Sampah Komunitas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="brand">
+            <div class="brand-icon">♻</div>
+            <span>EcoBank</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="dashboard.html" class="active">Dashboard</a></li>
+            <li><a href="setoran.html">Setor Sampah</a></li>
+            <li><a href="redeem.html">Katalog Poin</a></li>
+            <li><a href="index.html" style="color: #ef4444;">Keluar</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <!-- Hero Welcome -->
+        <div class="card hero-card">
+            <h1>Halo, Nasabah EcoBank!</h1>
+            <p>Terima kasih telah berkontribusi menjaga lingkungan hari ini.</p>
+        </div>
+
+        <!-- Dashboard Stat Cards -->
+        <div class="grid-3">
+            <div class="card">
+                <div class="card-title">💰 Total Poin Anda</div>
+                <div class="stat-value">1,250</div>
+                <div class="stat-label">Setara Rp 12.500</div>
+            </div>
+            <div class="card">
+                <div class="card-title">⚖ Total Setoran Sampah</div>
+                <div class="stat-value">48.5 kg</div>
+                <div class="stat-label">Terakumulasi dari awal</div>
+            </div>
+            <div class="card">
+                <div class="card-title">🌱 Dampak Lingkungan</div>
+                <div class="stat-value">122 kg</div>
+                <div class="stat-label">Reduksi Emisi CO2</div>
+            </div>
+        </div>
+
+        <!-- Recent Activity Table -->
+        <div class="card">
+            <div class="card-title">📋 Riwayat Setoran Terakhir</div>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tanggal</th>
+                            <th>Jenis Sampah</th>
+                            <th>Berat (kg)</th>
+                            <th>Poin Diperoleh</th>
+                        </tr>
+                    </thead>
+                    <tbody id="riwayatTbody">
+                        <!-- Data riwayat akan dimuat secara dinamis dari JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

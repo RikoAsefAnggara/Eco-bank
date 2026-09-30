@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Poin - EcoBank</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="brand">
+            <div class="brand-icon">♻</div>
+            <span>EcoBank</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="setoran.html">Setor Sampah</a></li>
+            <li><a href="redeem.html" class="active">Katalog Poin</a></li>
+            <li><a href="index.html" style="color: #ef4444;">Keluar</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="card" style="margin-bottom: 2rem;">
+            <div class="card-title">🎁 Penukaran Poin Nasabah</div>
+            <p style="color: var(--text-muted);">Poin Aktif Anda: <strong style="color: var(--primary-color); font-size: 1.1rem;">1,250 Poin</strong></p>
+        </div>
+
+        <div class="catalog-grid">
+            <!-- Item 1: Minyak Goreng -->
+            <div class="item-card">
+                <img src="https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&w=500&q=80" alt="Minyak Goreng" class="item-img">
+                <div class="item-content">
+                    <div>
+                        <div class="item-title">Minyak Goreng 1 Liter</div>
+                        <div class="item-cost">1,500 Poin</div>
+                    </div>
+                    <button class="btn btn-primary" onclick="tukarPoin('Minyak Goreng 1 Liter', 1500)">Tukar</button>
+                </div>
+            </div>
+
+            <!-- Item 2: Beras Premium -->
+            <div class="item-card">
+                <img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=500&q=80" alt="Beras Premium" class="item-img">
+                <div class="item-content">
+                    <div>
+                        <div class="item-title">Beras Premium 2.5 kg</div>
+                        <div class="item-cost">2,500 Poin</div>
+                    </div>
+                    <button class="btn btn-primary" onclick="tukarPoin('Beras Premium 2.5 kg', 2500)">Tukar</button>
+                </div>
+            </div>
+
+            <!-- Item 3: Voucher Pulsa -->
+            <div class="item-card">
+                <img src="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?auto=format&fit=crop&w=500&q=80" alt="Voucher Pulsa" class="item-img">
+                <div class="item-content">
+                    <div>
+                        <div class="item-title">Voucher Pulsa Rp 10.000</div>
+                        <div class="item-cost">1,000 Poin</div>
+                    </div>
+                    <button class="btn btn-primary" onclick="tukarPoin('Voucher Pulsa Rp 10.000', 1000)">Tukar</button>
+                </div>
+            </div>
+
+            <!-- Item 4: Token Listrik PLN -->
+            <div class="item-card">
+                <img src="https://images.unsplash.com/photo-1558441719-670b357021bc?auto=format&fit=crop&w=500&q=80" alt="Token Listrik PLN" class="item-img">
+                <div class="item-content">
+                    <div>
+                        <div class="item-title">Token Listrik PLN Rp 20.000</div>
+                        <div class="item-cost">2,000 Poin</div>
+                    </div>
+                    <button class="btn btn-primary" onclick="tukarPoin('Token Listrik PLN Rp 20.000', 2000)">Tukar</button>
+                </div>
+            </div>
+
+            <!-- Item 5: Gula Pasir -->
+            <div class="item-card">
+                <img src="https://images.unsplash.com/photo-1581441363689-1f3c3c414635?auto=format&fit=crop&w=500&q=80" alt="Gula Pasir" class="item-img">
+                <div class="item-content">
+                    <div>
+                        <div class="item-title">Gula Pasir Kristal 1 kg</div>
+                        <div class="item-cost">1,200 Poin</div>
+                    </div>
+                    <button class="btn btn-primary" onclick="tukarPoin('Gula Pasir Kristal 1 kg', 1200)">Tukar</button>
+                </div>
+            </div>
+
+            <!-- Item 6: Paket Sembako Hemat -->
+            <div class="item-card">
+                <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=500&q=80" alt="Paket Sembako Hemat" class="item-img">
+                <div class="item-content">
+                    <div>
+                        <div class="item-title">Paket Sembako Lengkap</div>
+                        <div class="item-cost">4,500 Poin</div>
+                    </div>
+                    <button class="btn btn-primary" onclick="tukarPoin('Paket Sembako Lengkap', 4500)">Tukar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoBank - Login Multi Role</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="brand" style="justify-content: center; margin-bottom: 1rem;">
+                <div class="brand-icon">♻</div>
+                <span>EcoBank</span>
+            </div>
+            <h2>Selamat Datang</h2>
+            <p>Sistem Informasi Pengelolaan & Bank Sampah</p>
+
+            <form id="formLogin">
+                <div class="form-group">
+                    <label for="roleSelect">Masuk Sebagai</label>
+                    <select id="roleSelect" class="form-control" required>
+                        <option value="nasabah">Nasabah / Warga</option>
+                        <option value="admin">Petugas / Pengurus Bank Sampah</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="username">ID Pengguna / Username</label>
+                    <input type="text" id="username" class="form-control" placeholder="Contoh: NSB001 atau ADM001" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Kata Sandi</label>
+                    <input type="password" id="password" class="form-control" placeholder="••••••••" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Masuk ke Sistem</button>
+            </form>
+            
+            <div style="margin-top: 1.5rem; font-size: 0.8rem; color: var(--text-muted); background: #f3f4f6; padding: 0.75rem; border-radius: 8px;">
+                <strong>Akses Demo:</strong><br>
+                • Warga: NSB001 | Pass: warga123<br>
+                • Admin: ADM001 | Pass: admin123
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
